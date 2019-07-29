@@ -1,11 +1,20 @@
 
-spring:
- application:
-  name: web
-  profiles:
-      active: git
-  cloud:
-      config:
-        server:
-          git:
-           uri: https://github.com/ryanjbaxter/beginners-guide-to-spring-cloud/{application}
+#server:
+# port: 9090
+#greeting: Hello
+#greetings:
+# EN: Hello
+# ES: Hala
+# DE: Hallo
+
+spring.application.name=web
+
+#Active Profile - will relate to development properties file in the server.
+#If this property is absent then default profile will be activated which is
+#the property file without any environment name at the end.
+
+# this is the default
+
+spring.cloud.config.uri=http://localhost:8888
+
+management.security.enabled=false
